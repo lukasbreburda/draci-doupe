@@ -220,55 +220,90 @@ namespace dracak
 
             if (rr == 1)
             {
+                BitmapImage bitmap = new BitmapImage();
+                bitmap.BeginInit();
+                bitmap.UriSource = new Uri("http://previews.123rf.com/images/lawangdesign/lawangdesign1502/lawangdesign150200023/37154372-cute-wolf-cartoon-Stock-Photo.jpg");
+                bitmap.EndInit();
+
                 textenemy.Text = e1.lore;
                 p_enemy.Maximum = e1.healt;
                 p_enemy.Value = e1.healt;
-                // image.Source = ;
+                 image.Source = bitmap;
                 level = e1.level;
                 defense = e1.dev;
                 atack = e1.fig;
             }
             if (rr == 2)
             {
+                BitmapImage bitmap = new BitmapImage();
+                bitmap.BeginInit();
+                bitmap.UriSource = new Uri("http://static6.depositphotos.com/1152839/640/v/950/depositphotos_6404226-stock-illustration-bear-mascot-flexing-arm-cartoon.jpg");
+                bitmap.EndInit();
+
                 textenemy.Text = e2.lore;
                 p_enemy.Maximum = e2.healt;
                 p_enemy.Value = e2.healt;
                 level = e2.level;
+                image.Source = bitmap;
                 defense = e2.dev;
                 atack = e2.fig;
             }
             if (rr == 3)
             {
+                BitmapImage bitmap = new BitmapImage();
+                bitmap.BeginInit();
+                bitmap.UriSource = new Uri("http://st.depositphotos.com/1967477/2538/v/950/depositphotos_25388139-stock-illustration-lion-cartoon-roaring.jpg");
+                bitmap.EndInit();
+
                 textenemy.Text = e3.lore;
                 p_enemy.Maximum = e3.healt;
                 p_enemy.Value = e3.healt;
                 level = e3.level;
+                image.Source = bitmap;
                 defense = e3.dev;
                 atack = e3.fig;
             }
             if (rr == 4)
             {
+                BitmapImage bitmap = new BitmapImage();
+                bitmap.BeginInit();
+                bitmap.UriSource = new Uri("http://static4.depositphotos.com/1012083/295/v/950/depositphotos_2955197-stock-illustration-green-dwarf.jpg");
+                bitmap.EndInit();
+
                 textenemy.Text = e4.lore;
                 p_enemy.Maximum = e4.healt;
                 p_enemy.Value = e4.healt;
                 level = e4.level;
+                image.Source = bitmap;
                 defense = e4.dev;
                 atack = e4.fig;
             }
             if (rr == 5)
             {
+                BitmapImage bitmap = new BitmapImage();
+                bitmap.BeginInit();
+                bitmap.UriSource = new Uri("https://scontent-vie1-1.xx.fbcdn.net/v/t1.0-9/1958478_636975406367707_403968752_n.jpg?oh=410352ccc7c94e252f4640e7d909b529&oe=5922C05A");
+                bitmap.EndInit();
+
                 textenemy.Text = e5.lore;
                 p_enemy.Maximum = e5.healt;
                 p_enemy.Value = e5.healt;
+                image.Source = bitmap;
                 level = e5.level;
                 defense = e5.dev;
                 atack = e5.fig;
             }
             if (rr == 6)
             {
+                BitmapImage bitmap = new BitmapImage();
+                bitmap.BeginInit();
+                bitmap.UriSource = new Uri("http://st.depositphotos.com/2400497/2917/v/950/depositphotos_29175525-stock-illustration-cartoon-snake.jpg");
+                bitmap.EndInit();
+
                 textenemy.Text = e6.lore;
                 p_enemy.Maximum = e6.healt;
                 p_enemy.Value = e6.healt;
+                image.Source = bitmap;
                 level = e6.level;
                 defense = e6.dev;
                 atack = e6.fig;
