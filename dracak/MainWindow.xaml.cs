@@ -15,11 +15,10 @@ using System.Windows.Shapes;
 
 namespace dracak
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    //Hlavní třída main
     public partial class MainWindow : Window
     {
+        //založení hráče a enemy entit
         player p1 = new player();
         enemy e1 = new enemy();
         enemy e2 = new enemy();
@@ -28,26 +27,30 @@ namespace dracak
         enemy e5 = new enemy();
         enemy e6 = new enemy();
         enemy drak = new enemy();
+        //pomocné globální proměné 
         int rr;
         int atack;
         int defense;
         int level;
+        //úvodní screan 
         public MainWindow()
-        {  InitializeComponent();
+        {  InitializeComponent(); //inicializace
 
-            hiden();
+            hiden(); //funkce pro schování ostatních xampl atributů
             welcome.Visibility = Visibility.Visible;
             textname.Visibility = Visibility.Visible;
-            s_button.Visibility = Visibility.Visible;
-            welcome.Text = "Vítej ve hře dračák, tvým úkolem je nejdříve se vycvičit na dostatečnou úroveň, aby jsi se mohl vydat za drakem, kterého poté musíš zabít. setkáš se s ním, až tvoje síla dosáhne 100%, ale nesmíš při trénigu zemří. Nejprve zadej název svého hrdiny a stiskni tlačítko dále. ";
-           
+            s_button.Visibility = Visibility.Visible;//zobrazení xampl
+            welcome.Text = "Vítej ve hře dračák, tvým úkolem je nejdříve se vycvičit na dostatečnou úroveň, aby jsi se mohl vydat za drakem, kterého poté musíš zabít. Setkáš se s ním, až tvoje síla dosáhne 100%, ale nesmíš při tréninku zemřít. Nejprve zadej název svého hrdiny a stiskni tlačítko dále. ";
+           //welcome hláška
 
         }
 
-        private void s_button_Click(object sender, RoutedEventArgs e)
+        private void s_button_Click(object sender, RoutedEventArgs e) //funkce po stsknutí buttonu "Do toho"
         {
-            hiden();
+            hiden(); //schování ostatních atributů xampl
 
+
+            // zobrazení ostatních xampl atriburů
             h_bar.Visibility = Visibility.Visible;
             f_bar.Visibility = Visibility.Visible;
             d_bar.Visibility = Visibility.Visible;
@@ -65,42 +68,44 @@ namespace dracak
 
           
 
-
+            //definování atributů classy hrac
            
             p1.name = "Tvůj nickname: " + textname.Text;
             p1.healt = 100;
             p1.level = 1;
             p1.dev = 0;
             p1.fight = 1;
-
+            // nastavení barů
             h_bar.Maximum = 100;
             f_bar.Maximum = 50;
             d_bar.Maximum = 50;
-
+            //přenos defaulních hodnot z classy hrač do progress barů
             h_bar.Value = p1.healt;
             f_bar.Value = p1.fight;
             d_bar.Value = p1.dev;
-            name.Content = p1.name;
+            name.Content = p1.name; 
 
 
-            enemys();
+            enemys(); // funkce pro načtení enemy
 
         }
 
-        private void fight_but_Click(object sender, RoutedEventArgs e)
+        private void fight_but_Click(object sender, RoutedEventArgs e) //funkce pro utok 
         {
-            Random rnd = new Random();
+
+            //definice a výpočet utoku, který způsobý jak hráči, tak i enemy příšeře.
+            Random rnd = new Random(); //random
             int uu = rnd.Next(1, 10);
             int at = uu + 1 + p1.fight ;
             int tt;
-            if (defense > at)
+            if (defense > at) //podmínka, pokud je obraná hodnota větší než útok, neprováděj útok
             {
              tt = 0;
             }
              tt = at - defense;
             if (tt > 0)
             {
-                p_enemy.Value = p_enemy.Value - tt;
+                p_enemy.Value = p_enemy.Value - tt; //odečte enemy životy s progress baru
             }
            
             int kk = rnd.Next(0, 3);
@@ -112,11 +117,12 @@ namespace dracak
             }
             xx = tr - p1.dev;
 
-            h_bar.Value = h_bar.Value - xx;
-            dead();
-            if (p_enemy.Value <= 0)
+            h_bar.Value = h_bar.Value - xx; //odečte hráči životy s pogress baru
+            dead(); //funkce pro smrt
+            if (p_enemy.Value <= 0) // pokud zemře enemy vyvolej novou
             {
-                enemys();
+                enemys(); //vyvolání enemyho
+                //zlepšení schopností hráče i enemiho
                 p1.dev = p1.dev + level;
                 p1.fight = p1.fight + (level * 3 );
                 h_bar.Value = p1.healt;
@@ -129,9 +135,10 @@ namespace dracak
 
                 
             }
-            if (p1.fight >= 50)
+            if (p1.fight >= 50) //pokud je síla 50 vstup na finální souboj
             {
-                hiden();
+                hiden(); //funkce pro skrytí
+                //zobrazení 
                 f1_but.Visibility = Visibility.Visible;
                 f2_but.Visibility = Visibility.Visible;
                 d_but.Visibility = Visibility.Visible;
@@ -144,25 +151,25 @@ namespace dracak
                 h.Visibility = Visibility.Visible;
                 f.Visibility = Visibility.Visible;
                 d.Visibility = Visibility.Visible;
-
+                //založení enemy draka
                 drak.name = "Drak";
                 drak.healt = 250;
                 drak.level = 9;
                 drak.fig = 50;
                 drak.dev = 35;
-                drak.lore = "Dokončil jsi svůj trénink a nyní se můžeš utkat s Drakem. Naučil jsi se kouzlu, ale nezapoměň, že kouzla se mohou odrazit. Hodně štěstí.!";
+                drak.lore = "Dokončil jsi svůj trénink a nyní se můžeš utkat s Drakem. Naučil jsi se kouzlu, ale nezapoměň, že kouzla se mohou odrazit a jejich užití má za následek ztrátu síly. Hodně štěstí !!!";
 
                 
-                f_prog.Maximum = drak.healt;
+                f_prog.Maximum = drak.healt; //přenesení hodnot s classy do proměné
                 f_prog.Value = drak.healt;   
                 defense = drak.dev;
                 atack = drak.fig;
 
-                f_wel.Text = drak.lore;
+                f_wel.Text = drak.lore; //výpis finální hlášky
 
                 BitmapImage bitmap = new BitmapImage();
                 bitmap.BeginInit();
-                bitmap.UriSource = new Uri("http://obrazky-gif.wz.cz/draci/12/drak-109.gif");
+                bitmap.UriSource = new Uri("http://obrazky-gif.wz.cz/draci/12/drak-109.gif"); //převedení url obrázku na formát schpný zpracovat image.source
                 bitmap.EndInit();
                 f_image.Source = bitmap;
 
@@ -170,16 +177,16 @@ namespace dracak
             }
         }
 
-        private void dev_but_Click(object sender, RoutedEventArgs e)
+        private void dev_but_Click(object sender, RoutedEventArgs e) //definice obraného tlačítka
         {
             Random rnd = new Random();
             int hel = rnd.Next(0, 10);
             int del = hel / 4;
 
-            p_enemy.Value = p_enemy.Value + del;
-            h_bar.Value = h_bar.Value + hel;
+            p_enemy.Value = p_enemy.Value + del; //přičtení protívníkovy životy 
+            h_bar.Value = h_bar.Value + hel; //přičtení hráči životy
         }
-        public void hiden()
+        public void hiden() //definice funkce která skyrá veškeré atributy xamlp
         {
             h_bar.Visibility = Visibility.Hidden;
             f_bar.Visibility = Visibility.Hidden;
@@ -206,54 +213,55 @@ namespace dracak
             f_image.Visibility = Visibility.Hidden;
             f_wel.Visibility = Visibility.Hidden;
         }
-        public void enemys()
+        public void enemys() //funkce pro vyvolání enemyho
         {
-            e1.name = "Vlk";
-            e1.healt = 20;
-            e1.level = 1;
-            e1.fig = 10;
-            e1.dev = 5;
-            e1.lore = "Během svého trenování si narazil na Vlka. Rychle se ho zbav!!";
-
+            //založení enemy atributů pro vytvořenou classu
+            e1.name = "Vlk"; //název
+            e1.healt = 20; //životy
+            e1.level = 1; //level
+            e1.fig = 10; //síla
+            e1.dev = 5; //obrana
+            e1.lore = "Během svého trenování jsi narazil na Vlka. Poror je rychlý a může být velmi nebezpečný proto se ho co nejdřív zbav!!"; //vstupní příběh
+            //založení enemy atributů pro vytvořenou classu
             e2.name = "Medvěd";
             e2.healt = 30;
             e2.level = 2;
             e2.fig = 10;
             e2.dev = 3;
-            e2.lore = "Během svého trenování si narazil na Medvěda. Rychle se ho zbav!!";
-
+            e2.lore = "Během své trenikové výpravy jsi narazil na velkého medvěda. Dej si pozor na jeho drápy!";
+            //založení enemy atributů pro vytvořenou classu
             e3.name = "Lev";
             e3.healt = 35;
             e3.level = 2;
             e3.fig = 10;
             e3.dev = 4;
-            e3.lore = "Během svého trenování si narazil na Lva. Rychle se ho zbav!!";
-
+            e3.lore = "Během svého trenování jsi narazil na Lva, nepodceň jej a zneškodni ho vší silu!!";
+            //založení enemy atributů pro vytvořenou classu
             e4.name = "Trpaslík";
             e4.healt = 12;
             e4.level = 1;
             e4.fig = 15;
             e4.dev = 1;
-            e4.lore = "Během svého trenování si narazil na zákeřného trpaslíka. Rychle se ho zbav!!";
-
+            e4.lore = "Během svého trenování si narazil na zákeřného trpaslíka, který není tak roztomilí jak se na první pohled může zdát!!";
+            //založení enemy atributů pro vytvořenou classu
             e5.name = "Kočvara";
             e5.healt = 40;
             e5.level = 3;
             e5.fig = 10;
             e5.dev = 6;
             e5.lore = "Během svého trenování si narazil na anime Kočvaru. Rychle se ho zbav, ale pozor je velmi zákeřný!!";
-
+            //založení enemy atributů pro vytvořenou classu
             e6.name = "Had";
             e6.healt = 10;
             e6.level = 2;
             e6.fig = 15;
             e6.dev = 5;
-            e6.lore = "Během svého trenování si narazil na hada. Rychle se ho zbav!!";
+            e6.lore = "Během svého trenování si narazil na hada. Raděj si dej pozor!!";
 
-            Random rnd = new Random();
-            rr = rnd.Next(1, 6);
+            Random rnd = new Random(); //random pro výběr náhodného enemyho
+            rr = rnd.Next(1, 7);
 
-            if (rr == 1)
+            if (rr == 1) //podmínka pro přenesení hodnot s classu do proměných 
             {
                 BitmapImage bitmap = new BitmapImage();
                 bitmap.BeginInit();
@@ -268,7 +276,7 @@ namespace dracak
                 defense = e1.dev;
                 atack = e1.fig;
             }
-            if (rr == 2)
+            if (rr == 2)//podmínka pro přenesení hodnot s classu do proměných 
             {
                 BitmapImage bitmap = new BitmapImage();
                 bitmap.BeginInit();
@@ -283,7 +291,7 @@ namespace dracak
                 defense = e2.dev;
                 atack = e2.fig;
             }
-            if (rr == 3)
+            if (rr == 3)//podmínka pro přenesení hodnot s classu do proměných 
             {
                 BitmapImage bitmap = new BitmapImage();
                 bitmap.BeginInit();
@@ -298,7 +306,7 @@ namespace dracak
                 defense = e3.dev;
                 atack = e3.fig;
             }
-            if (rr == 4)
+            if (rr == 4)//podmínka pro přenesení hodnot s classu do proměných 
             {
                 BitmapImage bitmap = new BitmapImage();
                 bitmap.BeginInit();
@@ -313,7 +321,7 @@ namespace dracak
                 defense = e4.dev;
                 atack = e4.fig;
             }
-            if (rr == 5)
+            if (rr == 5)//podmínka pro přenesení hodnot s classu do proměných 
             {
                 BitmapImage bitmap = new BitmapImage();
                 bitmap.BeginInit();
@@ -328,7 +336,7 @@ namespace dracak
                 defense = e5.dev;
                 atack = e5.fig;
             }
-            if (rr == 6)
+            if (rr == 6)//podmínka pro přenesení hodnot s classu do proměných 
             {
                 BitmapImage bitmap = new BitmapImage();
                 bitmap.BeginInit();
@@ -345,12 +353,12 @@ namespace dracak
             }
         }
 
-        private void exit_Click(object sender, RoutedEventArgs e)
+        private void exit_Click(object sender, RoutedEventArgs e) //definice tláčítka exit
         {
-            Application.Current.Shutdown();
+            Application.Current.Shutdown(); //ukončení wpf aplikace
         }
 
-        private void f1_but_Click(object sender, RoutedEventArgs e)
+        private void f1_but_Click(object sender, RoutedEventArgs e) //definování útoku při finálním fightu
         {
             Random rnd = new Random();
             int uu = rnd.Next(1, 10);
@@ -380,7 +388,7 @@ namespace dracak
         }
         
 
-        private void f2_but_Click(object sender, RoutedEventArgs e)
+        private void f2_but_Click(object sender, RoutedEventArgs e) //definování tlačítka kouzlo
         {
             Random rnd = new Random();
             int uu = rnd.Next(1, 30);
@@ -410,7 +418,7 @@ namespace dracak
             win();
         }
 
-        private void d_but_Click(object sender, RoutedEventArgs e)
+        private void d_but_Click(object sender, RoutedEventArgs e) //definice obranného tlačítka.
         {
             Random rnd = new Random();
             int hel = rnd.Next(0, 20);
@@ -419,7 +427,7 @@ namespace dracak
             f_prog.Value = f_prog.Value + del;
             h_bar.Value = h_bar.Value + hel;
         }
-        public void dead()
+        public void dead() //funkce pro výpis konce hry (prohra)
         {
             if (h_bar.Value <= 0)
             {
@@ -429,7 +437,7 @@ namespace dracak
                 exit.Visibility = Visibility.Visible;
             }
         }
-        public void win()
+        public void win()//funkce pro výpis konce hry (prohra)
         {
             if(f_prog.Value <= 0)
             {
