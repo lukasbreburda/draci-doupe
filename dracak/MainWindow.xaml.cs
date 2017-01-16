@@ -27,6 +27,7 @@ namespace dracak
         enemy e4 = new enemy();
         enemy e5 = new enemy();
         enemy e6 = new enemy();
+        enemy drak = new enemy();
         int rr;
         int atack;
         int defense;
@@ -38,7 +39,7 @@ namespace dracak
             welcome.Visibility = Visibility.Visible;
             textname.Visibility = Visibility.Visible;
             s_button.Visibility = Visibility.Visible;
-            welcome.Text = "Vítej ve hře dračák, tvým úkolem je nejdříve se vycvičit na dostatečnou úroven, aby si se mohl vydat za drakem, kterého poté musíš zabít. setkáš se s ním, až tvoje síla dosáhne 100%, ale nesmíš při trénigu zemří. Nejprve zadej název svého hrdiny a stiskni tlačítko dále. ";
+            welcome.Text = "Vítej ve hře dračák, tvým úkolem je nejdříve se vycvičit na dostatečnou úroveň, aby jsi se mohl vydat za drakem, kterého poté musíš zabít. setkáš se s ním, až tvoje síla dosáhne 100%, ale nesmíš při trénigu zemří. Nejprve zadej název svého hrdiny a stiskni tlačítko dále. ";
            
 
         }
@@ -73,8 +74,8 @@ namespace dracak
             p1.fight = 1;
 
             h_bar.Maximum = 100;
-            f_bar.Maximum = 100;
-            d_bar.Maximum = 100;
+            f_bar.Maximum = 50;
+            d_bar.Maximum = 50;
 
             h_bar.Value = p1.healt;
             f_bar.Value = p1.fight;
@@ -112,13 +113,7 @@ namespace dracak
             xx = tr - p1.dev;
 
             h_bar.Value = h_bar.Value - xx;
-            if (h_bar.Value <= 0)
-            {
-                hiden();
-
-                end.Visibility = Visibility.Visible;
-                exit.Visibility = Visibility.Visible;
-            }
+            dead();
             if (p_enemy.Value <= 0)
             {
                 enemys();
@@ -134,9 +129,44 @@ namespace dracak
 
                 
             }
-            if (p1.fight >= 100)
+            if (p1.fight >= 50)
             {
                 hiden();
+                f1_but.Visibility = Visibility.Visible;
+                f2_but.Visibility = Visibility.Visible;
+                d_but.Visibility = Visibility.Visible;
+                f_prog.Visibility = Visibility.Visible;
+                f_image.Visibility = Visibility.Visible;
+                f_wel.Visibility = Visibility.Visible;
+                h_bar.Visibility = Visibility.Visible;
+                f_bar.Visibility = Visibility.Visible;
+                d_bar.Visibility = Visibility.Visible;
+                h.Visibility = Visibility.Visible;
+                f.Visibility = Visibility.Visible;
+                d.Visibility = Visibility.Visible;
+
+                drak.name = "Drak";
+                drak.healt = 250;
+                drak.level = 9;
+                drak.fig = 50;
+                drak.dev = 35;
+                drak.lore = "Dokončil jsi svůj trénink a nyní se můžeš utkat s Drakem. Naučil jsi se kouzlu, ale nezapoměň, že kouzla se mohou odrazit. Hodně štěstí.!";
+
+                
+                f_prog.Maximum = drak.healt;
+                f_prog.Value = drak.healt;   
+                defense = drak.dev;
+                atack = drak.fig;
+
+                f_wel.Text = drak.lore;
+
+                BitmapImage bitmap = new BitmapImage();
+                bitmap.BeginInit();
+                bitmap.UriSource = new Uri("http://obrazky-gif.wz.cz/draci/12/drak-109.gif");
+                bitmap.EndInit();
+                f_image.Source = bitmap;
+
+                
             }
         }
 
@@ -169,7 +199,12 @@ namespace dracak
             s_button.Visibility = Visibility.Hidden;
             end.Visibility = Visibility.Hidden;
             exit.Visibility = Visibility.Hidden;
-
+            f1_but.Visibility = Visibility.Hidden;
+            f2_but.Visibility = Visibility.Hidden;
+            d_but.Visibility = Visibility.Hidden;
+            f_prog.Visibility = Visibility.Hidden;
+            f_image.Visibility = Visibility.Hidden;
+            f_wel.Visibility = Visibility.Hidden;
         }
         public void enemys()
         {
@@ -313,6 +348,97 @@ namespace dracak
         private void exit_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void f1_but_Click(object sender, RoutedEventArgs e)
+        {
+            Random rnd = new Random();
+            int uu = rnd.Next(1, 10);
+            int at = uu + 1 + p1.fight;
+            int tt;
+            if (defense > at)
+            {
+                tt = 0;
+            }
+            tt = at - defense;
+            if (tt > 0)
+            {
+                f_prog.Value = f_prog.Value - tt;
+            }
+
+            int kk = rnd.Next(0, 3);
+            int tr = atack - kk;
+            int xx;
+            if (p1.dev > tr)
+            {
+                xx = 0;
+            }
+            xx = tr - p1.dev;
+            h_bar.Value = h_bar.Value - xx;
+            dead();
+            win();
+        }
+        
+
+        private void f2_but_Click(object sender, RoutedEventArgs e)
+        {
+            Random rnd = new Random();
+            int uu = rnd.Next(1, 30);
+            int at = uu + 1 + p1.fight;
+            int tt;
+            if (defense > at)
+            {
+                tt = 0;
+            }
+            tt = at - defense;
+            if (tt > 0)
+            {
+                f_prog.Value = f_prog.Value - tt;
+            }
+
+            int kk = rnd.Next(0, 3);
+            int tr = atack - kk;
+            int xx;
+            if (p1.dev > tr)
+            {
+                xx = 0;
+            }
+            xx = tr - p1.dev;
+            h_bar.Value = h_bar.Value - xx;
+            f_bar.Value = f_bar.Value - 10;
+            dead();
+            win();
+        }
+
+        private void d_but_Click(object sender, RoutedEventArgs e)
+        {
+            Random rnd = new Random();
+            int hel = rnd.Next(0, 20);
+            int del = hel / 2;
+
+            f_prog.Value = f_prog.Value + del;
+            h_bar.Value = h_bar.Value + hel;
+        }
+        public void dead()
+        {
+            if (h_bar.Value <= 0)
+            {
+                hiden();
+
+                end.Visibility = Visibility.Visible;
+                exit.Visibility = Visibility.Visible;
+            }
+        }
+        public void win()
+        {
+            if(f_prog.Value <= 0)
+            {
+                hiden();
+                end.Visibility = Visibility.Visible;
+                end.Text = "Vyhrál jsi !!!";
+                end.Foreground = Brushes.Green;
+                exit.Visibility = Visibility.Visible;
+            }
         }
     }
    
