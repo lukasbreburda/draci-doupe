@@ -15,16 +15,19 @@ using System.Windows.Shapes;
 
 namespace dracak
 {
-    //Hlavní třída main
-    public partial class MainWindow : Window
+    /// <summary>
+    /// Interaction logic for win.xaml
+    /// </summary>
+    public partial class win : Page
     {
-        public static Frame framePublic;
-        public MainWindow()
+        public win()
         {
             InitializeComponent();
-            framePublic = frame;
-            MainWindow.framePublic.Source = new Uri("pages/uvod.xaml", UriKind.Relative);
         }
-           
+
+        private void exit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown(); //ukončení wpf aplikace
+        }
     }
 }

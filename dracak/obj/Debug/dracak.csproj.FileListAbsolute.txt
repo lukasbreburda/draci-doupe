@@ -36,3 +36,34 @@ C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak\draci-doupe\dracak\o
 C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak\draci-doupe\dracak\obj\Debug\dracak.g.resources
 C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak\draci-doupe\dracak\obj\Debug\dracak.Properties.Resources.resources
 C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak\draci-doupe\dracak\obj\Debug\dracak.csproj.GenerateResource.Cache
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak\draci-doupe\dracak\obj\Debug\Page1.g.cs
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak\draci-doupe\dracak\obj\Debug\Page1.baml
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\bin\Debug\dracak.exe.config
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\obj\Debug\dracak.exe
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\obj\Debug\dracak.pdb
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\obj\Debug\dracak.csprojResolveAssemblyReference.cache
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\obj\Debug\MainWindow.g.cs
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\obj\Debug\App.g.cs
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\obj\Debug\dracak_MarkupCompile.cache
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\obj\Debug\dracak_MarkupCompile.lref
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\bin\Debug\dracak.exe
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\bin\Debug\dracak.pdb
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\bin\Debug\MaterialDesignColors.dll
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\obj\Debug\App.baml
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\obj\Debug\MainWindow.baml
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\obj\Debug\dracak.g.resources
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\obj\Debug\dracak.Properties.Resources.resources
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\obj\Debug\dracak.csproj.GenerateResource.Cache
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\obj\Debug\Pages\boss.g.cs
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\obj\Debug\Pages\dead.g.cs
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\obj\Debug\Pages\game.g.cs
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\obj\Debug\Pages\uvod.g.cs
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\obj\Debug\Pages\win.g.cs
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\obj\Debug\Pages\boss.baml
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\obj\Debug\Pages\dead.baml
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\obj\Debug\Pages\game.baml
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\obj\Debug\Pages\uvod.baml
+C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\obj\Debug\Pages\win.baml

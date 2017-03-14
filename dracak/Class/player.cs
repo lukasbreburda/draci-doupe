@@ -6,29 +6,28 @@ using System.Threading.Tasks;
 
 namespace dracak
 {
-    class enemy
+    public class player
     {
         private string _name;
-        private int _fig;
-        private int _dev;
+        private int _fight;
+        private int _def;
         private int _healt;
         private int _level;
-        private string _lore;
 
         public string name
         {
-            get { return _name; }
+            get { return _name;  }
             set { _name = value; }
         }
-        public int fig
+        public int fight               
         {
-            get { return _fig; }
-            set { _fig = value; }
+            get { return _fight; }
+            set { _fight = value; }
         }
         public int dev
         {
-            get { return _dev; }
-            set { _dev = value; }
+            get { return _def; }
+            set { _def = value; }
         }
         public int healt
         {
@@ -40,14 +39,9 @@ namespace dracak
             get { return _level; }
             set { _level = value; }
         }
-        public string lore
-        {
-            get { return _lore; }
-            set { _lore = value; }
-        }
         
        
-        }
-
-    
     }
+    
+}
+
