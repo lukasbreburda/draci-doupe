@@ -67,3 +67,6 @@ C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\
 C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\obj\Debug\Pages\game.baml
 C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\obj\Debug\Pages\uvod.baml
 C:\Users\brebu\Documents\Visual Studio 2015\Projects\dracak - kopie\draci-doupe\dracak\obj\Debug\Pages\win.baml
+D:\brebulu14\git\draci-doupe\dracak\bin\Debug\dracak.exe.config
+D:\brebulu14\git\draci-doupe\dracak\obj\Debug\dracak.exe
+D:\brebulu14\git\draci-doupe\dracak\obj\Debug\dracak.pdb

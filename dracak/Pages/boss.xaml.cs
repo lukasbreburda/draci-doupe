@@ -23,6 +23,17 @@ namespace dracak
         int atack;
         int defense;
 
+
+
+
+
+
+
+
+
+
+
+
         public boss()
         {
             InitializeComponent();
