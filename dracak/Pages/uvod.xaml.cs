@@ -57,6 +57,13 @@ namespace dracak
         //configurace veškerých tříd ve hře ---> změna celého příběhu
         private void config()
         {
+         /*   potvory.Add(
+                new enemy
+                {
+                    name = "Asda",
+                    healt = 15
+                });*/
+
             p1.name = textname.Text;
             p1.healt = 100;
             p1.level = 1;
