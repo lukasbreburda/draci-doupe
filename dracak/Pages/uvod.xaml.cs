@@ -53,6 +53,7 @@ namespace dracak
             p1.dev = 0;
             p1.fight = 1;
 
+
             e1.name = "Vlk"; //název
             e1.healt = 20; //životy
             e1.level = 1; //level
