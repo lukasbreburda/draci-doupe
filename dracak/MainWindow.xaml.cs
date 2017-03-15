@@ -15,15 +15,14 @@ using System.Windows.Shapes;
 
 namespace dracak
 {
-    //Hlavní třída main
     public partial class MainWindow : Window
     {
-        public static Frame framePublic;
+        public static Frame framePublic; //vytvoří veřejný frame 
         public MainWindow()
         {
             InitializeComponent();
-            framePublic = frame;
-            MainWindow.framePublic.Source = new Uri("pages/uvod.xaml", UriKind.Relative);
+            framePublic = frame; //definice veřejného framu na klasický 
+            MainWindow.framePublic.Source = new Uri("pages/uvod.xaml", UriKind.Relative); //uprava source framu na danou Page
         }
            
     }

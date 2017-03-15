@@ -20,20 +20,9 @@ namespace dracak
     /// </summary>
     public partial class boss : Page
     {
-        int atack;
+        //pomocné promněné 
+        int atack; 
         int defense;
-
-
-
-
-
-
-
-
-
-
-
-
         public boss()
         {
             InitializeComponent();
@@ -52,14 +41,8 @@ namespace dracak
             f_prog.Value = uvod.drak.healt;
             defense = uvod.drak.dev;
             atack = uvod.drak.fig;
-
             f_wel.Text = uvod.drak.lore; //výpis finální hlášky
-
-            BitmapImage bitmap = new BitmapImage();
-            bitmap.BeginInit();
-            bitmap.UriSource = new Uri("http://obrazky-gif.wz.cz/draci/12/drak-109.gif"); //převedení url obrázku na formát schpný zpracovat image.source
-            bitmap.EndInit();
-            f_image.Source = bitmap;
+            f_image.Source = new BitmapImage(new Uri(@uvod.drak.image, UriKind.Relative));
 
         }
 
@@ -140,7 +123,7 @@ namespace dracak
                 MainWindow.framePublic.Source = new Uri("pages/dead.xaml", UriKind.Relative);
             }
         }
-        public void win()//funkce pro výpis konce hry (prohra)
+        public void win()//funkce pro výpis konce hry (výhra)
         {
             if (f_prog.Value <= 0)
             {

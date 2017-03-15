@@ -15,12 +15,12 @@ using System.Windows.Shapes;
 
 namespace dracak
 {
-    /// <summary>
-    /// Interaction logic for uvod.xaml
-    /// </summary>
     public partial class uvod : Page
     {
-         public static List<enemy> potvory = new List<enemy>();
+        //založení tříd player a enemy
+        public static List<enemy> potvory = new List<enemy>();
+        public static List<place> mista = new List<place>();
+
         public static player p1 = new player();
         public static enemy e1 = new enemy();
         public static enemy e2 = new enemy();
@@ -30,21 +30,31 @@ namespace dracak
         public static enemy e6 = new enemy();
         public static enemy drak = new enemy();
 
-        public uvod()
+        public static place m1 = new place();
+        public static place m2 = new place();
+        public static place m3 = new place();
+        public static place m4 = new place();
+        public static place m5 = new place();
+        public static place m6 = new place();
+        public static place m7 = new place();
+
+        public static place mistik = new place();
+
+           public uvod()
         {
             InitializeComponent();
+            //výhozí welcome hláška
             welcome.Text = "Vítej ve hře dračák, tvým úkolem je nejdříve se vycvičit na dostatečnou úroveň, aby jsi se mohl vydat za drakem, kterého poté musíš zabít. Setkáš se s ním, až tvoje síla dosáhne 100%, ale nesmíš při tréninku zemřít. Nejprve zadej název svého hrdiny a stiskni tlačítko dále. ";
         }
       
-    
-        private void s_button_Click(object sender, RoutedEventArgs e)
+    //Funkce tlačítka vstoupit do hry
+        private void s_button_Click(object sender, RoutedEventArgs e) 
         {
-            config();
-            
-
-            MainWindow.framePublic.Source = new Uri("pages/game.xaml", UriKind.Relative);
+            config(); //konfigurační funkce entit           
+            MainWindow.framePublic.Source = new Uri("pages/game.xaml", UriKind.Relative); //změna source Page
         }
 
+        //configurace veškerých tříd ve hře ---> změna celého příběhu
         private void config()
         {
             p1.name = textname.Text;
@@ -52,7 +62,6 @@ namespace dracak
             p1.level = 1;
             p1.dev = 0;
             p1.fight = 1;
-
 
             e1.name = "Vlk"; //název
             e1.healt = 20; //životy
@@ -115,6 +124,61 @@ namespace dracak
             drak.dev = 35;
             drak.lore = "Dokončil jsi svůj trénink a nyní se můžeš utkat s Drakem. Naučil jsi se kouzlu, ale nezapoměň, že kouzla se mohou odrazit a jejich užití má za následek ztrátu síly. Hodně štěstí !!!";
             drak.image = "/obrazky/vlk.jpg";
+
+            m1.name = "";
+            m1.fight_bonus = 1;
+            m1.dev_bonus = 1;
+            m1.lore = "";
+            m1.image = "";
+            mista.Add(m1);
+
+            m2.name = "";
+            m2.fight_bonus = 1;
+            m2.dev_bonus = 1;
+            m2.lore = "";
+            m2.image = "";
+            mista.Add(m2);
+
+            m3.name = "";
+            m3.fight_bonus = 1;
+            m3.dev_bonus = 1;
+            m3.lore = "";
+            m3.image = "";
+            mista.Add(m3);
+
+            m4.name = "";
+            m4.fight_bonus = 1;
+            m4.dev_bonus = 1;
+            m4.lore = "";
+            m4.image = "";
+            mista.Add(m4);
+
+            m5.name = "";
+            m5.fight_bonus = 1;
+            m5.dev_bonus = 1;
+            m5.lore = "";
+            m5.image = "";
+            mista.Add(m5);
+
+            m6.name = "";
+            m6.fight_bonus = 1;
+            m6.dev_bonus = 1;
+            m6.lore = "";
+            m6.image = "";
+            mista.Add(m6);
+
+            m7.name = "";
+            m7.fight_bonus = 1;
+            m7.dev_bonus = 1;
+            m7.lore = "";
+            m7.image = "";
+            mista.Add(m7);
+
+            mistik.name = "";
+            mistik.fight_bonus = 1;
+            mistik.dev_bonus = 1;
+            mistik.lore = "";
+            mistik.image = "";
         }
     }
 }

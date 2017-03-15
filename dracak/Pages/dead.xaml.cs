@@ -24,7 +24,6 @@ namespace dracak
         {
             InitializeComponent();
         }
-
         private void exit_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown(); //ukončení wpf aplikace

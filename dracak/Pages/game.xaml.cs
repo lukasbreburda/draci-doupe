@@ -34,13 +34,12 @@ namespace dracak
             f_bar.Maximum = 50;
             d_bar.Maximum = 50;
             //přenos defaulních hodnot z classy hrač do progress barů
-
             h_bar.Value = uvod.p1.healt;
             f_bar.Value = uvod.p1.fight;
             d_bar.Value = uvod.p1.dev;
             name.Content = uvod.p1.name;
 
-            enemys();
+            enemys(); //načtení enemy entity
         }
 
         public void enemys() //funkce pro vyvolání enemyho
@@ -49,6 +48,7 @@ namespace dracak
             Random rnd = new Random(); //random pro výběr náhodného enemyho
             rr = rnd.Next(0, 6);
 
+            //na základě randomu je s kolekce vybrána určitá třída a její hodnoty jsou přeneseny do rozhraní hry
             textenemy.Text = uvod.potvory[rr].lore;
             p_enemy.Maximum = uvod.potvory[rr].healt;
             p_enemy.Value = uvod.potvory[rr].healt;
@@ -99,7 +99,7 @@ namespace dracak
             }
             if (uvod.p1.fight >= 50) //pokud je síla 50 vstup na finální souboj
             {
-                MainWindow.framePublic.Source = new Uri("pages/boss.xaml", UriKind.Relative);
+                MainWindow.framePublic.Source = new Uri("pages/boss.xaml", UriKind.Relative); //změna source Page
             }
         }
         private void dev_but_Click(object sender, RoutedEventArgs e) //definice obraného tlačítka
@@ -115,7 +115,7 @@ namespace dracak
         {
             if (h_bar.Value <= 0)
             {
-                MainWindow.framePublic.Source = new Uri("pages/dead.xaml", UriKind.Relative);
+                MainWindow.framePublic.Source = new Uri("pages/dead.xaml", UriKind.Relative); //definice obraného tlačítka
             }
         }
     }
