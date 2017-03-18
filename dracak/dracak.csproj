@@ -151,8 +151,27 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="picture\" />
+    <Resource Include="picture\pes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="picture\prase.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="picture\skret.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="picture\vlk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="picture\drak.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="picture\had.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="picture\medved.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

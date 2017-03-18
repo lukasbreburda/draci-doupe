@@ -75,7 +75,7 @@ namespace dracak
             e1.fig = 10; //síla
             e1.dev = 5; //obrana
             e1.lore = "rychlého zákeřného vlka. Dej si pozor na jeho zuby !"; //vstupní příběh
-            e1.image = "/obrazky/vlk.jpg";
+            e1.image = "/picture/vlk.jpg";
             potvory.Add(e1);
             //založení enemy atributů pro vytvořenou classu
             e2.name = "Medvěd";
@@ -84,7 +84,7 @@ namespace dracak
             e2.fig = 10;
             e2.dev = 3;
             e2.lore = "Obrovského medvěda, který má obrovskou sýlu ve svých rukou proto se ho raděj rychle zbav!";
-            e2.image = "/obrazky/vlk.jpg";
+            e2.image = "/picture/medved.jpg";
             potvory.Add(e2);
             //založení enemy atributů pro vytvořenou classu
             e3.name = "Pes";
@@ -93,7 +93,7 @@ namespace dracak
             e3.fig = 10;
             e3.dev = 4;
             e3.lore = "divokého psa.";
-            e3.image = "/obrazky/vlk.jpg";
+            e3.image = "/picture/pes.jpg";
             potvory.Add(e3);
             //založení enemy atributů pro vytvořenou classu
             e4.name = "Skřet";
@@ -102,7 +102,7 @@ namespace dracak
             e4.fig = 15;
             e4.dev = 1;
             e4.lore = "kouzelnického skřeta, který ovládá kouzla.";
-            e4.image = "/obrazky/vlk.jpg";
+            e4.image = "/picture/skret.jpg";
             potvory.Add(e4);
             //založení enemy atributů pro vytvořenou classu
             e5.name = "Prase";
@@ -111,7 +111,7 @@ namespace dracak
             e5.fig = 9;
             e5.dev = 5;
             e5.lore = "divoké prase. Nenech se splést jeho velikostí.";
-            e5.image = "/obrazky/vlk.jpg";
+            e5.image = "/picture/prase.jpg";
             potvory.Add(e5);
             //založení enemy atributů pro vytvořenou classu
             e6.name = "Had";
@@ -120,7 +120,7 @@ namespace dracak
             e6.fig = 15;
             e6.dev = 5;
             e6.lore = "zákeřného hada, který tě může velmi potrápit.";
-            e6.image = "/obrazky/vlk.jpg";
+            e6.image = "/picture/had.jpg";
             potvory.Add(e6);
 
             drak.name = "Drak";
@@ -129,7 +129,7 @@ namespace dracak
             drak.fig = 50;
             drak.dev = 35;
             drak.lore = "Dokončil jsi svůj trénink a nyní se můžeš utkat s Drakem. Naučil jsi se kouzlu, ale nezapoměň, že kouzla se mohou odrazit a jejich užití má za následek ztrátu síly. Hodně štěstí !!!";
-            drak.image = "/obrazky/vlk.jpg";
+            drak.image = "/picture/drak.jpg";
 
             m1.name = "Louka";
             m1.fight_bonus = 3;
