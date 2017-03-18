@@ -22,10 +22,13 @@ namespace dracak
     {      
         //pomocné globální proměné 
         int rr;
+        int kk;
+        int mm;
         int atack;
         int defense;
         int level;
-
+        int place_fight_bon;
+        int place_dev_bon;
         public game()
         {
             InitializeComponent();
@@ -44,18 +47,42 @@ namespace dracak
 
         public void enemys() //funkce pro vyvolání enemyho
         {
+            Random mis = new Random();
+            mm = mis.Next(0, 100);
+
+            if(mm == 25)
+            {
+
+                MainWindow.framePublic.Source = new Uri("pages/mistik.xaml", UriKind.Relative); //změna source Page
+            }
+
             
             Random rnd = new Random(); //random pro výběr náhodného enemyho
-            rr = rnd.Next(0, 6);
+            rr = rnd.Next(0, 5);
 
             //na základě randomu je s kolekce vybrána určitá třída a její hodnoty jsou přeneseny do rozhraní hry
-            textenemy.Text = uvod.potvory[rr].lore;
+            
             p_enemy.Maximum = uvod.potvory[rr].healt;
             p_enemy.Value = uvod.potvory[rr].healt;
             image.Source = new BitmapImage(new Uri(@uvod.potvory[rr].image, UriKind.Relative));
             level = uvod.potvory[rr].level;
             defense = uvod.potvory[rr].dev;
-            atack = uvod.potvory[rr].fig;           
+            atack = uvod.potvory[rr].fig;
+
+            Random rrr = new Random();
+            kk = rnd.Next(0, 6);
+
+            place_fight_bon = uvod.mista[kk].fight_bonus;
+            place_dev_bon = uvod.mista[kk].dev_bonus;
+            
+/*
+           ImageBrush myBrush = new ImageBrush();
+            myBrush.ImageSource =
+                new BitmapImage(new Uri(@uvod.mista[kk].image, UriKind.Relative));
+            MainWindow..Background = myBrush;*/
+            
+            textenemy.Text =  uvod.mista[kk].lore + uvod.potvory[rr].lore ;
+            
         }
         private void fight_but_Click(object sender, RoutedEventArgs e) //funkce pro utok 
         {
@@ -81,7 +108,7 @@ namespace dracak
                 xx = 0;
             }
             xx = tr - uvod.p1.dev;
-            h_bar.Value = h_bar.Value - xx; //odečte hráči životy s pogress baru
+            h_bar.Value = h_bar.Value - xx - place_fight_bon + place_dev_bon; //odečte hráči životy s pogress baru
             dead(); //funkce pro smrt
             if (p_enemy.Value <= 0) // pokud zemře enemy vyvolej novou
             {
@@ -108,7 +135,7 @@ namespace dracak
             int hel = rnd.Next(0, 10);
             int del = hel / 4;
 
-            p_enemy.Value = p_enemy.Value + del; //přičtení protívníkovy životy 
+            p_enemy.Value = p_enemy.Value + del ; //přičtení protívníkovy životy 
             h_bar.Value = h_bar.Value + hel; //přičtení hráči životy
         }
         public void dead() //funkce pro výpis konce hry (prohra)

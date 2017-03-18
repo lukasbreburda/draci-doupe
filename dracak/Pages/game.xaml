@@ -17,7 +17,7 @@
         <Label x:Name="f" Content="Síla" HorizontalAlignment="Left" Margin="374,54,0,0" VerticalAlignment="Top"/>
         <Label x:Name="d" Content="Obrana" HorizontalAlignment="Left" Margin="357,95,0,0" VerticalAlignment="Top"/>
 
-        <TextBlock x:Name="textenemy" HorizontalAlignment="Left" Margin="10,60,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="50" Width="342"/>
+        <TextBlock x:Name="textenemy" HorizontalAlignment="Left" Margin="10,28,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="67" Width="342"/>
         <Button x:Name="fight_but" Content="Útok" HorizontalAlignment="Left" Margin="71,257,0,0" VerticalAlignment="Top" Width="84" Height="34" Click="fight_but_Click"/>
         <Button x:Name="dev_but" Content="Obrana" HorizontalAlignment="Left" Margin="340,257,0,0" VerticalAlignment="Top" Width="86" Height="34" Click="dev_but_Click"/>
         <Image x:Name="image" HorizontalAlignment="Left" Height="110" Margin="165,95,0,0" VerticalAlignment="Top" Width="146"/>

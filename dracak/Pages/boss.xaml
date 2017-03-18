@@ -9,7 +9,7 @@
       Title="boss-fight" MaxHeight="350" MaxWidth="525" MinHeight="350" MinWidth="525">
 
     <Grid>
-        <Label x:Name="name" Content="Label" HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top" Height="28" Width="176"/>
+        <Label x:Name="name" Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="28" Width="176"/>
         <ProgressBar Foreground="blue" x:Name="h_bar" HorizontalAlignment="Left" Height="26" Margin="408,20,0,0" VerticalAlignment="Top" Width="100"/>
         <ProgressBar Foreground="Yellow" x:Name="f_bar" HorizontalAlignment="Left" Height="20" Margin="408,60,0,0" VerticalAlignment="Top" Width="100"/>
         <ProgressBar Foreground="red" x:Name="d_bar" HorizontalAlignment="Left" Height="20" Margin="408,101,0,0" VerticalAlignment="Top" Width="100"/>
@@ -18,13 +18,13 @@
         <Label x:Name="d" Content="Obrana" HorizontalAlignment="Left" Margin="357,95,0,0" VerticalAlignment="Top"/>
 
 
-        <TextBlock x:Name="f_wel" HorizontalAlignment="Left" Margin="10,31,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="59" Width="294"/>
-        <Image x:Name="f_image" HorizontalAlignment="Left" Height="137" Margin="133,87,0,0" VerticalAlignment="Top" Width="224"/>
+        <TextBlock x:Name="f_wel" HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="71" Width="324"/>
+        <Image x:Name="f_image" HorizontalAlignment="Left" Height="123" Margin="135,114,0,0" VerticalAlignment="Top" Width="199"/>
         <ProgressBar x:Name="f_prog" HorizontalAlignment="Left" Height="17" Margin="71,242,0,0" VerticalAlignment="Top" Width="355"/>
         <Button x:Name="f1_but" Content="Útok" HorizontalAlignment="Left" Margin="71,270,0,0" VerticalAlignment="Top" Width="84" Click="f1_but_Click"/>
         <Button x:Name="f2_but" Content="Kouzlo" HorizontalAlignment="Left" Margin="204,270,0,0" VerticalAlignment="Top" Width="86" Click="f2_but_Click"/>
         <Button x:Name="d_but" Content="Obrana" HorizontalAlignment="Left" Margin="340,270,0,0" VerticalAlignment="Top" Width="86" Click="d_but_Click"/>
-  
+
 
     </Grid>
 </Page>

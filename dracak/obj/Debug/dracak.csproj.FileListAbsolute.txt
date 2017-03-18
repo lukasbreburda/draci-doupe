@@ -96,3 +96,34 @@ D:\brebulu14\git\draci-doupe\dracak\obj\Debug\Pages\win.baml
 D:\brebulu14\git\draci-doupe\dracak\obj\Debug\dracak.g.resources
 D:\brebulu14\git\draci-doupe\dracak\obj\Debug\dracak.Properties.Resources.resources
 D:\brebulu14\git\draci-doupe\dracak\obj\Debug\dracak.csproj.GenerateResource.Cache
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\bin\Debug\dracak.exe.config
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\obj\Debug\dracak.exe
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\obj\Debug\dracak.pdb
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\bin\Debug\dracak.exe
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\bin\Debug\dracak.pdb
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\bin\Debug\MaterialDesignColors.dll
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\obj\Debug\dracak.csprojResolveAssemblyReference.cache
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\obj\Debug\Pages\boss.g.cs
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\obj\Debug\Pages\dead.g.cs
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\obj\Debug\Pages\game.g.cs
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\obj\Debug\MainWindow.g.cs
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\obj\Debug\Pages\uvod.g.cs
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\obj\Debug\Pages\win.g.cs
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\obj\Debug\App.g.cs
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\obj\Debug\dracak_MarkupCompile.cache
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\obj\Debug\dracak_MarkupCompile.lref
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\obj\Debug\App.baml
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\obj\Debug\Pages\boss.baml
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\obj\Debug\Pages\dead.baml
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\obj\Debug\Pages\game.baml
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\obj\Debug\MainWindow.baml
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\obj\Debug\Pages\uvod.baml
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\obj\Debug\Pages\win.baml
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\obj\Debug\dracak.g.resources
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\obj\Debug\dracak.Properties.Resources.resources
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\obj\Debug\dracak.csproj.GenerateResource.Cache
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\obj\Debug\Pages\mistik.g.cs
+C:\Users\Lukáš Breburda\Source\Repos\draci-doupe\dracak\obj\Debug\Pages\mistik.baml
