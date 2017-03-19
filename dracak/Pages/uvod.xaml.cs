@@ -101,7 +101,7 @@ namespace dracak
             e4.level = 1;
             e4.fig = 15;
             e4.dev = 1;
-            e4.lore = "kouzelnického skřeta, který ovládá kouzla.";
+            e4.lore = "kouzelnického skřeta, který ovládá temná kouzla.";
             e4.image = "/picture/skret.jpg";
             potvory.Add(e4);
             //založení enemy atributů pro vytvořenou classu
